@@ -1,0 +1,62 @@
+{
+  "ftp": {
+    "host": "10.31.74.103",
+    "port": 22,
+    "username": "root",
+    "password": "First@2015++",
+    "remotePath": "/home/frontend/workspace/website"
+  },
+  "jsdoc": false,
+  "postcss": {
+    "stylelint": false
+  },
+  "default": {
+    "keywords": "",
+    "description": "",
+    "client": {
+      "port": 9002,
+      "publicPath": "http://127.0.0.1:9002",
+      "postPublicPath": "http://10.31.74.103:8090"
+    },
+    "server": {
+      "port": 9098,
+      "uri": "http://10.31.74.103:8081"
+    },
+    "domain": {
+      "pc": "http://10.31.74.103:9098",
+      "mobile": "http://10.31.74.103:9098"
+    },
+    "topicId": {
+      "id1": "14",
+      "id2": "29",
+      "id3": "28"
+    }
+  },
+  "experiment": {
+    "client": {
+      "publicPath": "https://staticexppro.igoldenbeta.com/website",
+      "postPublicPath": "https://staticexppro.igoldenbeta.com/post-manager"
+    },
+    "server": {
+      "uri": "http://10.251.244.28:8080"
+    },
+    "domain": {
+      "pc": "https://exp.igoldenbeta.com",
+      "mobile": "https://m.igoldenbeta.com"
+    }
+  },
+  "production": {
+    "client": {
+      "publicPath": "https://static.igoldenbeta.com/website",
+      "postPublicPath": "https://static.igoldenbeta.com/post-manager"
+    },
+    "server": {
+      "uri": "http://10.168.17.239:8080"
+    },
+    "domain": {
+      "pc": "https://www.igoldenbeta.com",
+      "mobile": "https://m.igoldenbeta.com"
+    }
+  }
+}
+

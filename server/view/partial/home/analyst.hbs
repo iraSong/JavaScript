@@ -1,0 +1,46 @@
+<div class="wrap-analyst">
+  <div class="page-center main-analyst" >
+    <div class="title title-analyst">明星分析师</div>
+    <div class="main-left-analyst">
+      <div class="intro-left-analyst">
+        <img src="{{analystDetail.headUrl}}" >
+      </div>
+      <div class="intro-right-analyst">
+        <div  class="fz-18">{{analystDetail.name}}</div>
+        <div class="fz-14">{{analystDetail.authDescription}}</div>
+      </div>
+      <div class="txt-down-analyst">
+        {{analystDetail.summary}}
+        <div class="ellipsis dHide">....</div>
+      </div>
+      <div class="bg-analyst-left"><div id="btn-see" class="btn-see" data-url="{{analystDetail.url}}">详细介绍</div></div>
+    </div>
+    <div class="main-right-analyst">
+      <ul class="ul-analyst">
+        {{#each analystList}}
+          <li data-id="{{id}}">
+            <div class="item-cnt">
+              <div class="intro-up-analyst">
+                <!--<img src="{{headUrl}}" >-->
+                {{#if headUrl.length}}
+                  <img src="{{ headUrl }}" onerror="this.src='{{global.client.publicPath}}/static/img/icon_head@2x.png'">
+                {{else}}
+                  <img src="{{global.client.publicPath}}/static/img/icon_head@2x.png">
+                {{/if}}
+              </div>
+              <div class="intro-down">
+                <div  class="txt-analyst">{{name}}</div>
+                <div class="txt-12-analyst">{{authDescription}}</div>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+      <ul class="pages">
+        <li class="p_current page" data-start="1"></span>
+        <li class="page" data-start="2"></span>
+        <li class="page" data-start="3"></span>
+      </ul>
+    </div>
+  </div>
+</div>

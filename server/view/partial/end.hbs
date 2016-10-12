@@ -1,0 +1,53 @@
+<script src="{{global.client.publicPath}}/static/jquery.min.js?_={{global.version}}"></script>
+<!--[if lt IE 9]>
+<script src="{{global.client.publicPath}}/static/jquery.corner.min.js?_={{global.version}}"></script>
+<script src="{{global.client.publicPath}}/static/polyfill.min.js?_={{global.version}}"></script>
+<script>
+  ;(function() {
+    $('.j-corner').corner();
+  }());
+</script>
+<![endif]-->
+{{#if detailNews}}
+  <script src="{{ global.client.postPublicPath }}/static/js/post.js?_={{global.version}}"></script>
+{{/if}}
+{{#if script}}
+  {{#if highcharts}}
+    <script src="{{global.client.publicPath}}/static/highcharts.js?_={{global.version}}"></script>
+    <script src="{{global.client.publicPath}}/static/broken-axis.js?_={{global.version}}"></script>
+  {{/if}}
+  {{#if news}}
+    <script>
+      window.beta = {
+        count: '{{count}}',
+        domain: {
+          mobile: '{{global.domain.mobile}}',
+          pc: '{{global.domain.pc}}'
+        },
+        limit: 7
+      }
+    </script>
+  {{/if}}
+  <script src="{{global.client.publicPath}}/static/js/common.js?_={{global.version}}"></script>
+  <script src="{{global.client.publicPath}}/static{{script}}?_={{global.version}}"></script>
+{{/if}}
+<script>
+  // 下载按钮点击
+  $(document).on('click', '.more', function() {
+    $('#download-box').removeClass('dHide')
+    $('#mask').removeClass('dHide')
+  })
+  $('#download').on('click', function() {
+    $('#download-box').removeClass('dHide')
+    $('#mask').removeClass('dHide')
+  })
+  // 浮层点击
+  $('#mask').on('click', function() {
+    $('#download-box').addClass('dHide')
+    $('#mask').addClass('dHide')
+    if($('#open').length > 0){
+      $('#open').addClass('dHide')
+    }
+  })
+</script>
+{{> html-close }}
