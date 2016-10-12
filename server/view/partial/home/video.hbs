@@ -1,0 +1,16 @@
+<div class="wrap-video">
+  <div class="page-center main-video">
+    <div class="title title-video">精彩视频</div>
+    <!--<div class="viewAll-video"><a>查看全部</a></div>-->
+    <ul class="ul-video">
+      {{#each videoList}}
+        <li class="li{{@index}}">
+          <div class="banner-bg-video"></div>
+          <div class="banner-txt-video">{{title}}</div>
+          {{{url}}}
+          <!--<div id="mod_player{{@index}}"></div>-->
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
