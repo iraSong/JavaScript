@@ -1,0 +1,84 @@
+<div class="left-title"><strong>{{name}}</strong><span>{{creatorName}}&nbsp;创建于&nbsp;{{dateFormat createtime}}</span></div>
+<div class="percent"><span class="point">{{percentage allreturn}}%</span><span class="txt">创建以来</span></div>
+<div class="per-chart">
+<div class="item day"><div class="txt">日收益</div>
+  <div class="point">
+    {{#isPositive dayreturn}}+{{/isPositive}}{{percentage dayreturn}}%
+  </div>
+</div>
+<div class="item month"><div class="txt">月收益</div>
+  <div class="point">
+   {{#isPositive monthreturn}}+{{/isPositive}}{{percentage monthreturn}}%
+  </div>
+</div>
+<div class="item net">
+  {{#isNotEmpty netValue}}
+    <div class="txt">净值</div>
+    <div class="point">{{netValue}}</div>
+  {{/isNotEmpty}}
+</div>
+<div class="item borderLeft bor-per">
+  {{#isNotEmpty volatility}}
+    <div class="fz-14">
+      波动率
+    </div>
+    <div class="graph">
+      <div class="sector-outer">
+      <div class="sector" id="j-sector">
+        <ul>
+          <li {{#when volatility '===' '0'}}class="active"{{/when}}{{#when volatility '===' '1'}}class="active"{{/when}}><span></span></li>
+          <li {{#when volatility '===' '2'}}class="active"{{/when}}><span></span></li>
+          <li {{#when volatility '===' '3'}}class="active"{{/when}}><span></span></li>
+          <li {{#when volatility '===' '4'}}class="active"{{/when}}><span></span></li>
+          <li {{#when volatility '===' '5'}}class="active"{{/when}}><span></span></li>
+        </ul>
+      </div>
+      </div>
+      <div class="blod">
+          {{#when volatility '===' '0'}}非常低{{/when}}
+          {{#when volatility '===' '1'}}非常低{{/when}}
+          {{#when volatility '===' '2'}}低{{/when}}
+          {{#when volatility '===' '3'}}中{{/when}}
+          {{#when volatility '===' '4'}}高{{/when}}
+          {{#when volatility '===' '5'}}非常高{{/when}}
+      </div>
+    </div>
+  {{/isNotEmpty}}
+</div>
+<div class="item bor-per">
+  {{#isNotEmpty netValue}}
+    <div class="fz-14">
+      估值
+    </div>
+    <div class="graph">
+      <div class="sector-outer">
+      <div class="sector">
+        <ul>
+        <ul>
+          <li {{#when valuation '===' '0'}}class="active"{{/when}}{{#when valuation '===' '1'}}class="active"{{/when}}><span></span></li>
+          <li {{#when valuation '===' '2'}}class="active"{{/when}}><span></span></li>
+          <li {{#when valuation '===' '3'}}class="active"{{/when}}><span></span></li>
+          <li {{#when valuation '===' '4'}}class="active"{{/when}}><span></span></li>
+          <li {{#when valuation '===' '5'}}class="active"{{/when}}><span></span></li>
+        </ul>
+        </ul>
+      </div>
+      </div>
+      <div class="blod">
+        {{#when valuation '===' '0'}}非常低{{/when}}
+        {{#when valuation '===' '1'}}非常低{{/when}}
+        {{#when valuation '===' '2'}}低{{/when}}
+        {{#when valuation '===' '3'}}中{{/when}}
+        {{#when valuation '===' '4'}}高{{/when}}
+        {{#when valuation '===' '5'}}非常高{{/when}}
+      </div>
+    </div>
+  {{/isNotEmpty}}
+  </div>
+</div>
+{{#isNotEmpty content}}
+  <div class="tips">
+    【 投资理念】{{{safeString content}}}
+    <div class="ellipsis dHide">....</div>
+  </div>
+{{/isNotEmpty}}

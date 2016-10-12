@@ -1,0 +1,69 @@
+/***************************精彩视频**********************************/
+.wrap-video {
+  position: relative;
+
+  min-height: 580px;
+  margin-bottom: 80px;
+}
+.main-video {
+  .title-video {
+    margin-bottom: 55px;
+  }
+  .viewAll-video {
+    line-height: 30px;
+
+    float: right;
+
+    margin-top: 8px;
+
+    text-decoration: underline;
+
+    color: #ff8300;
+  }
+  .ul-video {
+    clear: fix;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: left;
+    li {
+      position: relative;
+
+      float: left;
+
+      width: 554px;
+      max-width: 49.5%;
+      &:nth-child(2n) {
+        float: right;
+      }
+    }
+    .banner-bg-video {
+      line-height: 60px;
+
+      width: 100%;
+      height: 50px;
+
+      opacity: .8;
+      background-color: #fd8204;
+    }
+    .banner-txt-video {
+      line-height: 50px;
+
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+      height: 50px;
+
+      text-align: center;
+
+      color: white;
+    }
+    embed, iframe {
+      width: 100% !important;
+    }
+  }
+}

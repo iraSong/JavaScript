@@ -1,0 +1,109 @@
+.introduce {
+  position: relative;
+
+  height: 1286px;
+
+  background-image: resolve(introduce.jpg);
+  background-size: 100% 100%;
+  .contain {
+    position: relative;
+
+    height: 100%;
+  }
+  .up-introduce {
+    img {
+      position: absolute;
+      top: 128px;
+      right: 380px;
+    }
+    .tips-introduce {
+      position: absolute;
+      top: 160px;
+      right: 0;
+
+      text-align: left;
+    }
+    .item-introduce {
+      height: 50px;
+      margin-top: 10px;
+    }
+    .btn-introduce {
+      font-size: 18px;
+
+      width: 80px;
+
+      text-align: center;
+
+      color: #f5f0eb;
+      border-radius: 25px;
+      background-color: #c4a884;
+    }
+    .txt-introduce {
+      font-size: 18px;
+
+      width: 300px;
+      margin-left: 15px;
+
+      color: #673a0a;
+    }
+  }
+  .bottom-introduce {
+    .tips-introduce {
+      position: absolute;
+      bottom: 80px;
+      left: 90px;
+
+      text-align: left;
+    }
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .fz-30-introduce {
+      font-size: 32px;
+
+      margin-bottom: 25px;
+
+      color: #ffe7d4;
+    }
+    .fz-50-introduce {
+      font-size: 57px;
+
+      margin-bottom: 30px;
+
+      letter-spacing: 8px;
+
+      color: $white;
+    }
+    .btn-download {
+      clear: fix;
+      img {
+        left: 0;
+
+        width: 134px;
+        height: 131px;
+      }
+      .btn-down-introduce {
+        font-size: 32px;
+        line-height: 56px;
+
+        float: right;
+
+        width: 230px;
+        height: 56px;
+        margin: 40px 10px;
+
+        cursor: pointer;
+        text-align: center;
+
+        color: #f79305;
+        border-radius: 5px;
+        background: white;
+        &:hover {
+          background: $gray-lightest;
+        }
+      }
+    }
+  }
+}

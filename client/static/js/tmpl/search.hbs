@@ -1,0 +1,78 @@
+
+{{#isNotEmpty expertBetas}}
+  <div class="title">专家组合<span class="subtitle"></span></div>
+  <ul class="list">
+    {{#each expertBetas}}
+      {{#isNotEmpty id}}
+        <li data-id= "{{id}}">
+          <div class="content-center">
+            {{#if picUrl.length}}
+              <img src="{{ picUrl }}" onerror="this.src='{{global.client.publicPath}}/static/img/list-{{@index}}.png'">
+            {{else}}
+              <img src="{{global.client.publicPath}}/static/img/list-{{@index}}.png">
+            {{/if}}
+            <div class="header-mask"></div>
+            <div class="header-content">
+              <div class="float-l">
+                <div class="name">{{name}}</div>
+                <div class="creat gray">{{creater}}</div>
+              </div>
+              <div class="float-r collection gray">
+                {{#isNotEmpty collectorCount}}
+                  {{collectorCount}}收藏 
+                {{/isNotEmpty}}
+              </div>
+            </div>
+            <div class="body-mask"></div>
+            <div class="body-content">
+              <div class="profit">{{percentage accuRoi}}%</div>
+              <div class="time">创建以来收益</div>
+            </div>
+          </div>
+        </li>
+      {{/isNotEmpty}}  
+    {{/each}}
+  </ul>
+{{/isNotEmpty}}
+
+{{#isNotEmpty normalBetas}}
+  <div class="title">达人组合<span class="subtitle"></span></div>
+  <ul class="list">
+    {{#each normalBetas}}
+      {{#isNotEmpty id}}
+        <li data-id= "{{id}}">
+          <div class="content-center">
+            {{#if picUrl.length}}
+              <img src="{{ picUrl }}" onerror="this.src='{{global.client.publicPath}}/static/img/list-{{@index}}.png'">
+            {{else}}
+              <img src="{{global.client.publicPath}}/static/img/list-{{@index}}.png">
+            {{/if}}
+            <div class="header-mask"></div>
+            <div class="header-content">
+              <div class="float-l">
+                <div class="name">{{name}}</div>
+                <div class="creat gray">{{creater}}</div>
+              </div>
+              <div class="float-r collection gray">
+                {{#isNotEmpty collectorCount}}
+                  {{collectorCount}}收藏 
+                {{/isNotEmpty}}
+              </div>
+            </div>
+            <div class="body-mask"></div>
+            <div class="body-content">
+              <div class="profit">{{percentage accuRoi}}%</div>
+              <div class="time">创建以来收益</div>
+            </div>
+          </div>
+        </li>
+      {{/isNotEmpty}}  
+    {{/each}}
+  </ul>
+{{else}}
+  {{#isNotEmpty expertBetas}}
+  {{else}}
+    <div class="title txt-c">没有查询到搜索结果</div>
+  {{/isNotEmpty}}
+{{/isNotEmpty}}
+<div class="more">查看更多组合</div>

@@ -1,0 +1,15 @@
+/**
+ * 公用常量
+ */
+
+$minWidth: 1024px;
+$maxWidth: 1166px;
+$portfolio: 5;
+
+/*颜色*/
+$txt-color: #ff8300;
+$black: #000;
+$white: #fff;
+$gray: #333;
+$gray-dark: #999;
+$gray-lightest: #f7f7f7;

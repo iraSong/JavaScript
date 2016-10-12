@@ -1,0 +1,193 @@
+@import 'base/var';
+@import 'base/common';
+@import './portfolio/portfolio.css';
+
+/******搜索结果********/
+.result-main {
+  min-height: 755px;
+  .content-center {
+    box-sizing: border-box;
+    width: 338px;
+    height: 197px;
+    padding: 20px 25px;
+
+    border: solid 1px #c2c2c2;
+    .profile {
+      height: 100px;
+
+      border-bottom: solid 1px #dcdcdc;
+      img {
+        float: left;
+
+        width: 82px;
+        height: 82px;
+
+        border-radius: 150px;
+      }
+      .txt {
+        font-size: 22px;
+        line-height: 42px;
+
+        float: left;
+        overflow: hidden;
+
+        max-width: 184px;
+        margin-left: 20px;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .gray{
+          position: relative;
+          text-align: justify;
+          /*兼容IE*/
+          text-justify:inter-ideograph;
+          font-size: 16px;
+          white-space: normal;
+          line-height: normal;
+          color: #999;
+          max-height: 42px;
+        }
+      }
+    }
+    .detail {
+      font-size: 14px;
+
+      margin-top: 10px;
+
+      color: #999;
+    }
+    .red {
+      color: red;
+    }
+    .bottom-content {
+      font-size: 16px;
+
+      margin-top: 10px;
+    }
+    .content {
+      line-height: 25px;
+
+      height: 25px;
+    }
+  }
+  .more-portfolio {
+    font-size: 16px;
+    line-height: 52px;
+
+    height: 52px;
+    margin-top: 45px;
+
+    cursor: pointer;
+    text-align: center;
+
+    border: solid 1px #cccbcb;
+  }
+}
+.oficial-result {
+  height: 582px;
+  .official {
+    box-sizing: border-box;
+    width: 668px;
+    max-width: 60%;
+    height: 280px;
+    margin: 70px 0;
+    padding: 32px 28px 30px 5px;
+    float: left;
+    border: 1px solid #c2c2c2;
+    .icon {
+      float: left;
+
+      width: 260px;
+
+      text-align: center;
+      .name {
+        font-size: 28px;
+        font-weight: bold;
+
+        margin-top: 15px;
+      }
+      .intr {
+        font-size: 20px;
+
+        margin-top: 15px;
+
+        color: #666;
+      }
+      img {
+        width: 116px;
+        height: 116px;
+
+        border-radius: 150px;
+      }
+    }
+    .detail {
+      float: right;
+
+      max-width: 350px;
+      .title-offical {
+        line-height: 45px;
+
+        height: 45px;
+        margin-bottom: 26px;
+
+        color: #666;
+        background: #f0f0f0;
+        span {
+          padding: 0 28px;
+        }
+      }
+      .portfolio {
+        font-size: 25px;
+
+        clear: both;
+
+        height: 58px;
+
+        color: #333;
+        span {
+          padding: 0 10px;
+        }
+        .right-portfolio {
+          font-size: 22px;
+          line-height: 36px;
+
+          height: 36px;
+
+          color: #fff;
+          border-radius: 5px;
+          background: #e34949;
+        }
+      }
+      .border {
+        position: relative;
+        top: -10px;
+
+        display: block;
+
+        height: 1px;
+
+        content: '';
+
+        background: #ccc;
+      }
+    }
+  }
+  .intr-official {
+    line-height: 24px;
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+    /*兼容IE*/
+    text-justify:inter-ideograph;
+    float: right;
+    max-width: 38%;
+    margin-top: 70px;
+    margin-left: 20px;
+    .top{
+      margin-top: 20px;
+    }
+  }
+}
+.master-result .list li {
+  cursor: default;
+}

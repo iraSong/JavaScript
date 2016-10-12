@@ -1,0 +1,270 @@
+@import 'base/var';
+@import 'base/common';
+@import 'home/portfolio-detail';
+@import 'home/anlasyt';
+@import 'home/introduce';
+@import 'home/news';
+@import 'home/video';
+@import './find-route.css';
+
+@define-extend title {
+  font-size: 26px;
+  font-weight: bold;
+
+  height: 90px;
+
+  text-align: left;
+}
+/**************搜索模块*************/
+.search {
+  position: relative;
+
+  width: 100%;
+  height: 285px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #343434;
+  .title-search {
+    font-size: 38px;
+    line-height: 114px;
+
+    height: 114px;
+
+    text-align: center;
+
+    color: $white;
+  }
+  .form {
+    height: 100px;
+    margin: auto;
+    .center-search {
+      position: relative;
+
+      width: 770px;
+      height: 80px;
+      margin: auto;
+      .btn-search {
+        font-size: 30px;
+        line-height: 80px;
+
+        float: right;
+
+        width: 100px;
+        height: 80px;
+
+        cursor: pointer;
+
+        color: $white;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        outline: none;
+        background: #ff8300;
+      }
+      .input-search {
+        font-size: 30px;
+        line-height: 80px; // ie 8
+
+        float: left;
+
+        width: 650px;
+        height: 80px;
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+
+        border: 0;
+        border-radius: 10px 0 0 10px;
+        outline: none;
+      }
+    }
+    /*ie 10+ */
+    input:-ms-input-placeholder{color:#ccc;}
+  }
+
+  .tips-search {
+    font-size: 22px;
+
+    text-align: center;
+
+    color: #999;
+  }
+}
+/***************************主体部分*************************************/
+.body {
+  text-align: center;
+  /***************************顶部banner*************************************/
+  .box{overflow:hidden}
+  .wh{height:100%!important}
+  .ww{width:100%!important}
+  .banner-container {
+    position: relative;
+
+    overflow: hidden;
+
+    /*min-height: 470px;*/
+    ul {
+      li {
+        position: absolute;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+
+        list-style: none;
+
+        transition: all 1.5s linear;
+
+        opacity: 0;
+        a,
+        img {
+          /*position: relative;
+
+          display: block;
+
+          width: 100%;
+          height: 100%;*/
+        }
+      }
+      .banner-current {
+        z-index: 5;
+
+        opacity: 1;
+      }
+    }
+    .focus-index {
+      position: absolute;
+      z-index: 6;
+      bottom: 34px;
+
+      width: 100%;
+      i {
+        display: inline-block;
+
+        width: 14px;
+        height: 14px;
+        margin: 0 6px;
+
+        background: resolve('banner-pager.png') no-repeat center;
+        &.on {
+          background-image: resolve('banner-pager-current.png');
+        }
+      }
+    }
+    .block-img {
+      display: block;
+      width: 100%;
+      /*min-height: 470px;*/
+    }
+    .title-banner {
+      .top-title-banner {
+        font-size: 56px;
+        color: #fff;
+      }
+      .bottom-title-banner {
+        font-size: 34px;
+        width: 522px;
+        margin: 65px auto;
+        color: #fff;
+        .txt-left {
+          float: left;
+          margin-bottom: 20px;
+        }
+        .txt-right {
+          float: right;
+        }
+        .clear-both {
+          clear: both;
+        }
+        .spacing {
+          letter-spacing: 6px;
+        }
+      }
+    }
+    .title-banner-layout {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 920px;
+      height: 270px;
+      margin-top: -135px;
+      margin-left: -460px;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  /**************投资方向 思路 ，师傅 圈子*************/
+  .wrap {
+    position: relative;
+
+    height: 458px;
+
+    border-bottom: 1px solid #d0d0d2;
+    .page-center {
+      overflow: hidden;
+
+      height: 100%;
+
+      word-break: break-all;
+      /*.title {
+        text-align: center;
+      }*/
+      .option {
+        padding-top: 70px;
+        a {
+          display: block;
+
+          width: 204px;
+          height: 204px;
+          margin: auto;
+          img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .find-route,
+        .find-master,
+        .find-circle {
+          width: 33.33333333%;
+        }
+      }
+    }
+  }
+}
+/******搜索结果********/
+.search-result {
+  height: auto;
+  min-height: 67%;
+  .search {
+    background: resolve(bg_search.png) center;
+    background-size: cover;
+    .form .center-search .btn-search {
+      background: #343434;
+    }
+    .tips-search {
+      font-size: 22px;
+
+      color: #fff;
+    }
+  }
+}
+.validate-search {
+  line-height: 50px;
+
+  position: absolute;
+  top: -55px;
+
+  width: 200px;
+  height: 50px;
+
+  text-align: center;
+
+  opacity: .5;
+  color: #000;
+  border-radius: 10px;
+  background: #fff;
+}

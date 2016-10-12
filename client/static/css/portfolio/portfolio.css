@@ -1,0 +1,58 @@
+/******搜索结果********/
+.result-main {
+  word-break: break-all;
+  .subtitle {
+    font-size: 20px;
+    font-weight: normal;
+
+    margin-left: 10px;
+
+    color: #999;
+  }
+  .list {
+    clear: fix;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    li {
+      float: left;
+      clear: fix;
+
+      width: 33.33333333%;
+      margin: 48px 0 0;
+
+      &:nth-child(3n+2) {
+        .content-center {
+          margin: auto;
+        }
+      }
+      &:nth-child(3n) {
+        .content-center {
+          float: right;
+        }
+      }
+      .content-center {
+        max-width: 99%;
+
+        cursor: pointer;
+      }
+    }
+  }
+  .more {
+    font-size: 16px;
+    line-height: 52px;
+
+    height: 52px;
+    margin: 45px 0;
+
+    cursor: pointer;
+    text-align: center;
+
+    border: solid 1px #cccbcb;
+    &:hover {
+      background: $gray-lightest;
+    }
+  }
+}

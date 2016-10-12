@@ -1,0 +1,19 @@
+{{#each portfolioList}}
+    <li data-id= "{{basketid}}">
+        <div class="content-center">
+        {{#if picurl.length}}
+            <img src="{{picurl}}">
+        {{/if}}
+        <div class="center-name txt-02">{{name}}</div>
+        <div class="portfolio-mask"></div>
+        <div class="txt-01">{{favoriteCount}}收藏</div>
+        <div class="txt-02">{{percentage allreturn}}%</div>
+        <div class="txt-03">创建以来</div>
+        <div class="txt-04">
+            <span class="float-left">{{name}}</span>
+            <span class="float-right">{{creatorName}}&nbsp;创建</span>
+        </div>
+        <div class="current-icon"></div>
+        </div>
+    </li>
+{{/each}}

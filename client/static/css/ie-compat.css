@@ -1,0 +1,97 @@
+@define-extend analyst-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 89px;
+  height: 89px;
+
+  content: '';
+
+  background: resolve(analyst-mask.png) no-repeat center;
+}
+
+.lt-ie9 {
+  /* 明星分析师 */
+  .main-analyst {
+    .intro-left-analyst {
+      position: relative;
+      &:after {
+        @extend analyst-mask;
+      }
+    }
+    .intro-up-analyst {
+      position: relative;
+      &:after {
+        right: 0;
+
+        margin: auto;
+
+        @extend analyst-mask;
+      }
+    }
+    .current-analyst {
+      .intro-up-analyst:after {
+        background-image: resolve(analyst-mask-active.png);
+      }
+    }
+    .item-cnt:hover {
+      .intro-up-analyst:after {
+        background-image: resolve(analyst-mask-active.png);
+      }
+    }
+  }
+  /* 首页视频 */
+  .ul-video .li1 {
+    float: right;
+  }
+  /* 组合收益详情 */
+  .detail-panel {
+    .bor-per {
+      margin-top: 18px !important;
+    }
+    .sector-outer {
+      visibility: hidden;
+
+      height: 18px !important;
+    }
+    .chart-menu {
+      .ico-circle {
+        background: resolve(ico-circle.png) no-repeat center !important;
+      }
+      .ico-circle-orange {
+        background: resolve(ico-circle-orange.png) !important;
+      }
+    }
+  }
+  /* 找师傅 */
+  .master {
+    .list .profile {
+      position: relative;
+      &:after {
+        @extend analyst-mask;
+      }
+      &:after {
+        width: 82px;
+        height: 82px;
+
+        background-image: resolve(analyst-mask-82.png);
+      }
+    }
+    .official .icon {
+      position: relative;
+      &:after {
+        @extend analyst-mask;
+      }
+      &:after {
+        right: 0;
+
+        width: 116px;
+        height: 116px;
+        margin: auto;
+
+        background-image: resolve(analyst-mask-116.png);
+      }
+    }
+  }
+}

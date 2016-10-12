@@ -1,0 +1,18 @@
+{{#each analystList}}
+  <li data-id = {{id}} class="">
+    <div class="item-cnt">
+      <div class="intro-up-analyst">
+        <!--<img src="{{headUrl}}" >-->
+        {{#if headUrl.length}}
+          <img src="{{ headUrl }}" onerror="this.src='{{global.client.publicPath}}/static/img/icon_head@2x.png'">
+        {{else}}
+          <img src="{{global.client.publicPath}}/static/img/icon_head@2x.png">
+        {{/if}}
+      </div>
+      <div class="intro-down">
+        <div  class="txt-analyst">{{name}}</div>
+       <div class="txt-12-analyst">{{authDescription}}</div>
+      </div>
+    </div>
+  </li>
+{{/each}}

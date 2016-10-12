@@ -1,0 +1,94 @@
+@import 'base/var';
+@import 'base/common';
+
+/***************新闻项**************/
+.item-news {
+  padding: 40px 0 40px 0;
+
+  text-align: left;
+  word-break: break-all;
+
+  border-bottom: 1px solid #dcdcdc;
+  a h2:hover {
+    text-decoration: underline;
+  }
+  .time-contain {
+    padding: 22px 0 32px 0;
+    .time-news {
+      font-size: 12px;
+
+      margin-right: 25px;
+
+      color: #999;
+    }
+  }
+  .content-news {
+    font-size: 14px;
+    line-height: 30px;
+
+    overflow: hidden;
+
+    max-height: 90px;
+
+    color: #000;
+  }
+}
+
+/***************分页标签**************/
+.pages-news {
+  position: relative;
+
+  text-align: left;
+  .page-contain-news {
+    padding: 55px 0;
+
+    text-align: center;
+  }
+  .page-style {
+    display: inline-table;
+
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+    background: #dcdcdc resolve(icon_left.png) no-repeat center;
+  }
+  .page-right {
+    background-image: resolve(icon_right.png);
+  }
+  .page-left:hover,
+  .page-right:hover {
+    background-color: #646262;
+  }
+  .list-news {
+    display: inline-table;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: left;
+
+    color: #999;
+    li {
+      float: left;
+
+      margin: 10px;
+
+      cursor: pointer;
+    }
+    a:hover {
+      color: #ff8300 !important;
+    }
+    .current-news {
+      border-bottom: 2px solid #ff8300;
+      a {
+        color: #ff8300 !important;
+      }
+    }
+  }
+}

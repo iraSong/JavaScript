@@ -1,0 +1,54 @@
+/***************************公共样式 *************************************/
+html {
+  position: relative;
+
+  min-height: 100%;
+}
+body {
+  padding-bottom: 185px;
+}
+.title {
+  font-size: 26px;
+  font-weight: bold;
+
+  padding-top: 70px;
+
+  text-align: left;
+}
+.ds-inline {
+  display: inline;
+}
+.ds-block {
+  display: block;
+}
+.ds-inline-block {
+  display: inline-block;
+}
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
+}
+.txt-c {
+  text-align: center;
+}
+.clear {
+  clear: both;
+}
+.in-table {
+  display: inline-table;
+}
+.dHide {
+  display: none;
+}
+.vHide {
+  visibility: hidden;
+}
+.ellipsis {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  width: 14px;
+}

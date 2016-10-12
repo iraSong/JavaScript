@@ -1,0 +1,29 @@
+@import 'base/var';
+@import 'base/common';
+#post {
+  margin-bottom: 0;
+  .header {
+    text-align: left;
+    .title {
+      line-height: 1.4;
+
+      margin-top: 30px;
+      padding-top: 0;
+    }
+  }
+  p {
+    margin: 1em 0;
+  }
+}
+#post,
+.ext {
+  .center {
+    overflow: hidden;
+
+    max-width: $maxWidth;
+    margin: auto;
+  }
+}
+.title {
+  padding-top: 0;
+}

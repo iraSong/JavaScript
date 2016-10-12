@@ -1,0 +1,125 @@
+@import 'base/var';
+@import 'base/common';
+
+/***************************顶部*************************************/
+.top-contain {
+  .top {
+    height: 498px;
+
+    color: $white;
+    background: resolve(bg_about.jpg);
+    background-size: cover;
+    .company {
+      font-size: 35px;
+
+      text-align: center;
+    }
+    .page-center {
+      position: relative;
+      top: 250px;
+    }
+    .company-description {
+      font-size: 16px;
+      line-height: 30px;
+
+      margin-top: 34px;
+
+      color: #dfe5f2;
+    }
+  }
+}
+/**********内容部分******************/
+.content {
+  clear: fix;
+
+  padding: 80px 0 0 0;
+
+  text-align: justify;
+  /*兼容IE*/
+  text-justify:inter-ideograph;
+  &.p-speech {
+    font-size: 14px;
+  }
+  .icon-title {
+    position: absolute;
+
+    display: inline-block;
+
+    width: 5px;
+    height: 28px;
+    margin-top: 6px;
+
+    background-image: resolve(icon_start.png);
+    background-repeat: round;
+  }
+  .title-contact {
+    font-size: 26px;
+
+    margin-left: 24px;
+  }
+  .left-content {
+    float: left;
+
+    width: 50%;
+    height: 100%;
+
+    text-align: justify;
+    /*兼容IE*/
+    text-justify:inter-ideograph;
+    .content-01 {
+      font-size: 16px;
+      line-height: 30px;
+
+      margin-top: 46px;
+
+      color: $black;
+    }
+    .content-02 {
+      font-size: 14px;
+
+      margin-top: 42px;
+
+      color: $black;
+    }
+    .content-03 {
+      font-size: 14px;
+
+      margin-top: 30px;
+
+      color: $black;
+    }
+  }
+  .right-content {
+    float: right;
+
+    width: 50%;
+    height: 100%;
+    img {
+      float: right;
+    }
+  }
+  .speech-01 {
+    padding-top: 40px;
+  }
+  .speech-02 {
+    line-height: 24px;
+
+    padding-top: 24px;
+  }
+  .signature {
+    float: right;
+
+    width: 182px;
+    height: 114px;
+
+    background-image: resolve(manager_name.png);
+  }
+  .txt-signature {
+    line-height: 114px;
+
+    float: right;
+
+    width: 200px;
+    height: 114px;
+  }
+}

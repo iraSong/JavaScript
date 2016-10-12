@@ -1,0 +1,11 @@
+{{#each newsList}}
+ <div class="item-news">
+    <h2><a href="/tcontent/post/{{id}}.html">{{title}}</a></h2>
+    <p class="time-contain"><span class="time-news">{{publishTime}}</span><span class="time-news">
+      {{#isNotEmpty sourceSitename}}
+        来源：{{sourceSitename}}
+      {{/isNotEmpty}}
+    </span></p>
+    <p class="content-news">{{summary}}</p>
+ </div>
+{{/each}}
